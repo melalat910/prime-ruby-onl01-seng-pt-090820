@@ -1,7 +1,11 @@
-if num.abs <2
+def prime?(n)
+  if n <= 1
     return false
-elsif num.abs % counter == 0 && num.abs!=counter
-    return false
-else
+  elsif n <= 3
     return true
+  else (2..n/2).none? do |x|
+    n % x == 0
+  end
+  end
 end
+
